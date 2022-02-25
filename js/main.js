@@ -1,5 +1,5 @@
 // ! MAIL
-const elencoMail = ["luca@gmail.com" , "giulia@gmail.com" , "francesco@gmail.com" , "alberto@gmail.com" , "simona@gmail.com" ]
+const elencoMail = ["luca@gmail.com" , "giulia@gmail.com" , "francesco@gmail.com" , "alberto@gmail.com" , "simona@gmail.com" ];
 
 
 for (let i = 0; i < elencoMail.length; i++) {
@@ -36,21 +36,29 @@ mailVerifyBtn.addEventListener('click', function() {
 
 
 // ! DICE GAME
-let randomNumberUser = Math.floor(Math.random() * 6) + 1;
-let randomNumberComputer = Math.floor(Math.random() * 6) + 1;
-let randomNumberDice = Math.floor(Math.random() * 6) + 1;
 
-console.log(`Numero dado user: ${randomNumberUser}`);
-console.log(`Numero dado computer: ${randomNumberComputer}`);
-console.log(`Numero dado dice: ${randomNumberDice}`);
+let startGameBtn = document.getElementById("my-btn-game");
+startGameBtn.addEventListener('click', function() {
+    let randomNumberUser = Math.floor(Math.random() * 6) + 1;
+    let randomNumberComputer = Math.floor(Math.random() * 6) + 1;
+    let randomNumberDice = Math.floor(Math.random() * 6) + 1;
 
-const userDiff = Math.abs(randomNumberUser - randomNumberDice);
-const computerDiff = Math.abs(randomNumberComputer - randomNumberDice);
+    document.getElementById("my-p-user").innerHTML = `Il tuo numero: ${randomNumberUser}`;
+    document.getElementById("my-p-computer").innerHTML = `Il numero del computer: ${randomNumberComputer}`;
+    document.getElementById("my-p-dice").innerHTML = `Il numero del dado: ${randomNumberDice}`;
 
-if (userDiff === computerDiff) {
-    console.log('Pareggio!');
-} else if (userDiff > computerDiff) {
-    console.log('Ha vinto il computer!');
-} else {
-    console.log('Hai vinto tu!');
-}
+    const userDiff = Math.abs(randomNumberUser - randomNumberDice);
+    const computerDiff = Math.abs(randomNumberComputer - randomNumberDice);
+
+    if (userDiff === computerDiff) {
+        document.getElementById("my-game-winner").innerHTML = "Hai pareggiato con il computer!";
+    } else if (userDiff > computerDiff) {
+        document.getElementById("my-game-winner").innerHTML = "Ha vinto il computer!";
+    } else {
+        document.getElementById("my-game-winner").innerHTML = "Ha vinto te!"
+    }
+});
+
+
+
+
