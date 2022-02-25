@@ -14,8 +14,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header>
+        <h1 class="text-center p-3 bg-primary text-dark">Benvenuto nel sito dove puoi verificare la tua email e se vuoi fare una partita a dadi</h1>
+    </header>
 
+
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <h3>Elenco di tutte le email</h3>
+                    <ul id="my-mail-list">
+
+                    </ul>
+                </div>
+
+                <div class="col-3 d-flex justify-content-center">
+                    <div class="d-flex align-items-center my-container-mail">
+                        <input id="my-mail-input" class="text-center me-3" type="text">
+                        <button class="btn btn-success">Verifica</button>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <h2 id="my-mail-verification"></h2>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>
