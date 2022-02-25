@@ -8,15 +8,30 @@ for (let i = 0; i < elencoMail.length; i++) {
     ulElement.innerHTML = elencoMail[i]; 
 }
 
-let userInputMail = "ciao";
+let userInputMail = document.getElementById("my-mail-input");
 
-for (let i = 0; i < 1; i++) {
-    if (elencoMail[i] == userInputMail) {
-        console.log('Esiste!!!')
-    } else {
-        console.log('Sei un falsoo!!!')
+let mailVerifyBtn = document.getElementById("my-btn-send");
+mailVerifyBtn.addEventListener('click', function() {
+
+    let checkValue = false;
+
+    for (let i = 0; i < elencoMail.length; i++) {
+        if (elencoMail[i] == userInputMail.value) {
+            checkValue = true;
+        }
     }
-}
+
+    if (checkValue == true) {
+        document.getElementById("my-mail-verification").innerHTML = "Evviva, compare nell'elenco!";
+    } else {
+        document.getElementById("my-mail-verification").innerHTML = "Sei un falsooo!";
+    }
+
+    userInputMail.value = "";
+});
+
+
+
 
 
 
