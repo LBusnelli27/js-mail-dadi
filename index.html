@@ -22,7 +22,9 @@
 
     <main>
         <div class="container-fluid">
+            <!-- Row email verification -->
             <div class="row mb-5 bg-light">
+                <!-- Email list array -->
                 <div class="col-3">
                     <h3>Elenco di tutte le email</h3>
                     <ul id="my-mail-list">
@@ -30,6 +32,7 @@
                     </ul>
                 </div>
 
+                <!-- Input text & btn check -->
                 <div class="col-3 d-flex justify-content-center">
                     <div class="d-flex align-items-center my-container-mail">
                         <input id="my-mail-input" class="text-center me-3" type="text">
@@ -37,18 +40,22 @@
                     </div>
                 </div>
 
+                <!-- Verification result -->
                 <div class="col-3 d-flex align-items-center text-center">
                     <h2 id="my-mail-verification" class="text-decoration-underline text-warning fw-bold"></h2>
                 </div>
             </div>
 
 
+            <!-- Row dice game -->
             <div class="row">
                 <h2 class="mb-5">Il gioco dei dadi. Chi riuscira ad avvicinarsi di pi&ugrave;?</h2>
+                <!-- Btn to start the game -->
                 <div class="col-2 d-flex justify-content-center">
                     <button id="my-btn-game" class="btn btn-dark">Premi per giocare</button>
                 </div>
 
+                <!-- Show all tha random number -->
                 <div class="col-3">
                     <h3>Ecco i numeri che sono usciti!</h3>
                     <p id="my-p-user" class="text-primary"></p>
@@ -56,6 +63,7 @@
                     <p id="my-p-dice" class="text-primary"></p>
                 </div>
 
+                <!-- Winner result -->
                 <div class="col-3 d-flex align-items-center text-center">
                     <h2 id="my-game-winner" class="text-primary bg-dark fw-bold"></h2>
                 </div>
@@ -63,6 +71,8 @@
         </div>
     </main>
 
+
+    <!-- ? Link js -->
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
